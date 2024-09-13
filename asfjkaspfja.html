@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/encuesta" method="post">
+        <label for="ocupacion">Ocupación:</label> <!-- el valor de for es el ID del select-->
+        <select id="ocupacion" name="ocupacion" required> <!-- selector de opciones -->
+            <option value="">Selecciona una opción</option> <!-- no hay valor en el atributo value -->
+            <option value="estudiante">Estudiante</option> <!-- aquí si hay valor en value, es lo que se manda al servidor: estudiante-->
+            <option value="profesor">Profesor</option> <!-- valor enviado profesor-->
+            <option value="trabajador">Trabajador</option> <!-- valor enviado trabajador -->
+        </select>
+ 
+ 
+        <label for="intereses">Intereses:</label>
+        <input type="checkbox" id="interes1" name="intereses" value="deportes"> <label for="interes1">Deportes</label> <!-- uso de checkbox (cajas de verificación) -->
+        <input type="checkbox" id="interes2" name="intereses" value="musica"> <label for="interes2">Música</label>
+        <input type="checkbox" id="interes3" name="intereses" value="lectura"> <label for="interes3">Lectura</label>
+ 
+ 
+        <label for="comentarios">Comentarios:</label>
+        <textarea id="comentarios" name="comentarios"></textarea> <!-- uso de textarea para escribir -->
+ 
+ 
+        <input type="submit" value="Enviar">
+    </form>
+ 
+</body>
+</html>
